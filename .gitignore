@@ -78,4 +78,5 @@ htmlcov/
 
 # Project specific
 collected_files.txt
+*.pdf
 
