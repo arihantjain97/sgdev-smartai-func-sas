@@ -72,7 +72,7 @@ jobs:
         uses: azure/login@v2
         with:
           client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_AAC8D48C05EF48F6BE381BD5D67ACA95 }}
-          tenant-id: ${{ AZUREAPPSERVICE_TENANTID_824826EA4787444EB203387B67FED56C }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_824826EA4787444EB203387B67FED56C }}
           subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_B6A65D46D160493DB5219991D5897CCB }}
 
       - name: 'Deploy to Azure Functions'
@@ -82,3 +82,4 @@ jobs:
           app-name: 'sgdev-smartai-func-sas'
           slot-name: 'Production'
           package: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
+
